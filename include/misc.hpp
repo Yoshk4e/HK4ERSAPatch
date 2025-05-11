@@ -3,11 +3,10 @@
 
 #include <ModuleManager.hpp>   // IMhyModule, ModuleType
 #include <interceptor.hpp>
-#include <common.h>            // your Registers definition
+#include <common.h>            
 #include <windows.h>
 #include <cstdint>
 
-// RVA of Unity’s SetCustomPropertyFloat thunk
 static constexpr std::uintptr_t SET_CUSTOM_PROPERTY_FLOAT = 0xFD3D20;
 
 class MiscModule : public IMhyModule {
@@ -42,7 +41,6 @@ private:
     std::uintptr_t assemblyBase;
     std::uintptr_t hookAddr = 0;
 
-    // Matches Rust’s `extern "win64" fn(*mut Registers, usize, usize) -> usize`
     static std::uintptr_t __fastcall set_custom_property_float_replacement(
         Registers* /*regs*/,
         std::uintptr_t /*arg1*/,
