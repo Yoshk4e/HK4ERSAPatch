@@ -1,10 +1,10 @@
 #pragma once
 
-#include <ModuleManager.hpp>   // IMhyModule, ModuleType
+#include <ModuleManager.hpp>
 #include <interceptor.hpp>
-#include <common.h>            // your Registers definition
-#include <server_public_key.h> // server_public_key_bin, _len
-#include <sdk_public_key.h>    // SDK_PUBLIC_KEY_XML
+#include <common.h>            
+#include <server_public_key.h>
+#include <sdk_public_key.h>    
 #include <windows.h>
 #include <vector>
 #include <string>
